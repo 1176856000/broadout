@@ -1,0 +1,100 @@
+
+ paypal/Model/Express/Checkout.php place 812:lukecothran55@gmail.com--lukecothran55@gmail.com
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ paypal/Model/Express/Checkout.php place 812:uelmen.daniel@gmail.com--uelmen.daniel@gmail.com------2021-01-19 03:55:28
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:16:56
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:16:57
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:17:08
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:17:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:17:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:17:30
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:17:44
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:18:11
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:18:12
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:18:58
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:19:33
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:20:23
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:22:14
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:23:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:27:36
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:28:39
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:38:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:39:21
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 00:59:38
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 01:00:42
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 01:42:19
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 01:43:24
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 03:07:40
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 03:09:05
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 05:58:23
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 06:00:07
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 11:39:45
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 11:41:30
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 23:02:26
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-20 23:04:27
+ paypal/Model/Express/Checkout.php place 812:edander04@hotmail.com--edander04@hotmail.com------2021-01-21 01:06:41
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-21 21:47:58
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-21 21:51:30
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 16:16:26
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 16:16:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 16:29:13
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 16:45:07
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 16:59:44
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 17:07:07
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 17:22:51
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 17:37:05
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 17:56:19
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 18:21:15
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 19:06:26
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 20:31:48
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-22 21:48:49
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-22 21:52:44
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-22 23:22:29
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-23 05:03:50
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:29:59
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:00
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:05
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:06
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:11
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:32
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:30:38
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:31:14
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:31:19
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:32:36
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:32:41
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:35:18
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:35:22
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:40:40
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:40:44
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:51:21
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 14:51:25
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 15:12:42
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 15:12:46
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 15:55:24
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 15:55:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-23 16:26:32
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 17:20:46
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 17:20:48
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 20:11:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 20:11:30
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 21:48:51
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-23 21:52:52
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-24 01:52:49
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-24 01:52:52
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-24 13:15:34
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-24 13:15:35
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-24 15:11:57

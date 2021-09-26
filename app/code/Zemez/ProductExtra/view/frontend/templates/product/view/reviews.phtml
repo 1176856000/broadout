@@ -1,0 +1,57 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+//总数
+$reviewsCollection = $block->getReviewsCollection();
+
+//echo "<pre>";
+//print_r($Reviews->getData());
+//print_r($this->getPid());
+//echo "</pre>";
+$renum = 0;
+if ($reviewsCollection && count($reviewsCollection) > 0) {
+    foreach ($reviewsCollection as $value) {
+        if ($value['entity_pk_value'] == $this->getPid()) {
+            $renum++;
+        }
+    }
+}
+
+//评论均分
+// Get reviews collection
+$dateFormat = $block->getDateFormat() ? : \IntlDateFormatter::SHORT;
+
+$allRatingsAvg = [];
+if ($reviewsCollection && count($reviewsCollection) > 0) {
+    foreach ($reviewsCollection AS $review) {
+        if($review['entity_pk_value'] == $this->getPid()){
+            // Display Average Rating of Review
+            $countRatings = count($review->getRatingVotes());
+            if ($countRatings > 0) {?>
+                <?php
+                $allRatings = 0;
+                foreach ($review->getRatingVotes() as $vote) {
+                    $allRatings = $allRatings + $vote->getPercent();
+                }
+                $allRatingsAvg[] = $allRatings / $countRatings;
+                ?>
+            <?php }
+        }
+    }
+}
+if(empty($allRatingsAvg) || $renum == 0){
+    $ratingValue = 0;
+}else{
+    $ratingValue = round((array_sum($allRatingsAvg) / $renum) , 2);
+}
+
+?>
+<!--<span itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" itemscope>-->
+<!--    <meta itemprop="reviewCount" content="--><?//= $renum?><!--" />-->
+<!--    <meta itemprop="ratingValue" content="--><?//= $ratingValue?><!--" />-->
+<!--</span>-->
+
+
+<?php

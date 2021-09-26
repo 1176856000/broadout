@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Datagenerator
+ * @copyright   Copyright (c) 2020 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Magento\Catalog\Ui\DataProvider\Product\Form\Modifier\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="pr-google-category" xsi:type="array">
+                    <item name="class" xsi:type="string">Plumrocket\Datagenerator\Ui\DataProvider\Catalog\Form\Modifier\GoogleCategory</item>
+                    <item name="sortOrder" xsi:type="number">160</item>
+                </item>
+                <item name="pr-eav" xsi:type="array">
+                    <item name="class" xsi:type="string">Plumrocket\Datagenerator\Ui\DataProvider\Catalog\Form\Modifier\Eav</item>
+                    <item name="sortOrder" xsi:type="number">170</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Catalog\Model\Category\DataProvider">
+        <plugin name="hide_google_category" type="Plumrocket\Datagenerator\Plugin\Catalog\Model\Category\DataProvider"/>
+    </type>
+    <type name="Plumrocket\Datagenerator\Model\Template">
+        <arguments>
+            <argument name="phpSerializer" xsi:type="object">Magento\Framework\Serialize\Serializer\Serialize</argument>
+        </arguments>
+    </type>
+</config>

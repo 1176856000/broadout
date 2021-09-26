@@ -1,0 +1,133 @@
+"block_id","title","identifier","content","creation_time","update_time","is_active"
+"1","Footer Column 1 Title","footer_col_1_title","<h4>Information</h4>","2018-09-18 17:07:20","2018-09-18 19:08:58","1"
+"2","Footer Column Content 1","footer_col_1","<ul>
+    <li><a href=""{{store direct_url=""about-us""}}"">About Us</a></li>
+    <li><a href=""{{store direct_url=""customer-service""}}"">Customer Service</a></li>
+    <li><a href=""{{store url=""""}}template-settings"">Template Settings</a></li>
+</ul>","2018-09-18 19:10:57","2018-09-18 19:10:57","1"
+"3","Footer Column Content 2","footer_col_2","<div class=""footer-col"">
+	<h4>Why buy from us</h4>
+	<div class=""footer-col-content"">
+	    <ul>
+	        <li><a href=""{{store url=""""}}shipping-delivery"">Shipping & Delivery</a></li>
+	        <li><a href=""{{store url=""""}}secure-payment"">Secure Payment</a></li>
+	        <li><a href=""{{store url=""""}}support"">Support</a></li>
+	        <li><a href=""{{store url=""""}}guarantee"">Guarantee</a></li>
+	        <li><a href=""{{store url=""""}}terms-conditions"">Terms & Conditions</a></li>
+	    </ul>
+	</div>
+</div>","2018-09-18 19:11:42","2019-03-19 12:19:24","1"
+"4","Footer Column Content 3","footer_col_3","<div class=""footer-col"">
+    <h4>My account</h4>
+    <div class=""footer-col-content"">
+        <ul>
+            <li><a href=""{{store url='customer/account/login/'}}"">Sign In</a></li>
+            <li><a href=""{{store url='checkout/cart/'}}"">View Cart</a></li>
+            <li><a href=""{{store url='wishlist/'}}"">My Wishlist</a></li>
+            <li><a href=""{{store url=""""}}faq"">FAQ</a></li>
+        </ul>
+    </div>
+</div>","2018-09-18 19:12:18","2018-09-18 19:12:18","1"
+"6","AMP Footer Links","amp_footer_links","<ul><li><a href=""{{store url='about-us'}}"">About Us</a></li><li><a href=""{{store url='contact'}}"">Contact Us</a></li><li><a href=""{{store url='customer-service'}}"">Customer Service</a></li><li><a href=""{{store url='privacy-policy-cookie-restriction-mode'}}"">Privacy Policy</a></li><li><a href=""{{store url='template-settings'}}"">Templates Settings</a></li></ul>","2018-09-18 19:26:13","2018-09-18 19:26:13","1"
+"7","Contact Us Info","contact_us_info","<!-- Contact Us Info -->
+<address class=""contact-us-info"">
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-map-marker""></span>
+            <div class=""contact-us-info-title"">Address:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description"">4578 Marmora Road, Glasgow, D04 89GR</div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-phone""></span>
+            <div class=""contact-us-info-title"">Phones:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description""><a href=""tel:8001230045"">(800) 123-0045</a>; <a
+                    href=""tel:8001230046"">(800) 123-0046</a></div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-clock-o""></span>
+            <div class=""contact-us-info-title"">We are open:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description"">Mn-Fr: 10 am-8 pm</div>
+        </dd>
+    </dl>
+    <dl class=""contact-us-info-item"">
+        <dt><span class=""contact-us-info-icon fa fa-envelope""></span>
+            <div class=""contact-us-info-title"">E-mail:</div>
+        </dt>
+        <dd>
+            <div class=""contact-us-info-description contact-us-info-description-email""><a
+                    href=""mailto:info@demolink.org"">info@demolink.org</a></div>
+        </dd>
+    </dl>
+</address>
+<!-- END Contact Us Info -->","2018-10-10 20:31:43","2018-10-10 20:31:43","1"
+"8","Banners-1","banners-1","<div class=""row"">
+    <div class=""col-m-7"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=""wysiwyg/banner1.jpg""}}"" alt="""" />
+            <div class=""banner-content left"">
+                <h1>HIKING<br>EQUIPMENT</h1>
+                <span class=""action primary hidden-mobile"">Learn more</span>
+            </div>
+        </a>
+    </div>
+    <div class=""col-m-5 gutter-left-percentage"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=""wysiwyg/banner2.jpg""}}"" alt="""" />
+            <div class=""banner-content text-center"">
+                <h1 class=""color-white"">fall/<br>winter 2018</h1>
+                <span class=""action default white"">Learn more</span>
+            </div>
+        </a>
+    </div>
+</div>","2019-02-19 12:09:41","2019-03-19 16:35:23","1"
+"9","Banners-2","bannesr-2","<div class=""row"">
+    <div class=""col-m-5 gutter-right-percentage"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=""wysiwyg/banner3.jpg""}}"" alt="""" />
+            <div class=""banner-content  text-center"">
+                <h1><span class=""bg-dark"">big sale!</span> <br> <span class=""bg-dark"">save 50% off</span> <br><span class=""bg-dark"">all accessories</span> </h1>
+                <span class=""action primary"">Learn more</span>
+            </div>
+        </a>
+    </div>
+    <div class=""col-m-7"">
+        <a class=""banner hovered"" href=""{{store url='women.html'}}"">
+            <img src=""{{media url=""wysiwyg/banner4.jpg""}}"" alt="""" />
+            <div class=""banner-content left"">
+                <h1 class=""color-white"">get an extra<br>20% off<br>first order</h1>
+                <span class=""action primary hidden-mobile"">Learn more</span>
+            </div>
+        </a>
+    </div>
+</div>","2019-02-19 14:31:17","2019-03-19 16:35:48","1"
+"10","Menu Banner","menu_banner","<a class=""banner hovered"" href=""{{store url='men.html'}}"">
+   <img src=""{{media url=&quot;wysiwyg/top-banner.jpg&quot;}}"" alt="""" />
+</a>","2019-02-20 17:50:35","2019-02-20 17:54:58","1"
+"11","Footer Column Content 4","footer_col_4","<div class=""footer-col"">
+	<ul class=""footer-info-box"">
+		<li>
+			<p class=""themeicon-local_phone""><strong><a href=""callto:80023456789"">+3(800) 2345-6789</a></strong></p>
+			<p>Round-the-clock free hotline (24/7)</p>
+		</li>
+		<li>
+			<p class=""themeicon-local_shipping""><strong>Free Shipping</strong></p>
+			<p>We provide you with fast and free delivery regardless of the product size and value. </p>
+		</li>
+		<li>
+			<p class=""themeicon-replay""><strong>Return & Exchange</strong></p>
+			<p>You can return or exchange the item within 14 days.</p>
+		</li>
+	</ul>
+</div>","2019-03-06 14:51:34","2019-03-14 18:11:42","1"
+"12","Amp Banner","amp_banner","<div class=""amp-banner"">
+    <a href=""{{store url='women.html?amp=1'}}"" class=""banner-image"">
+    	<img width=""300"" height=""125"" layout=""responsive"" src=""{{media url=&quot;wysiwyg/amp_banner.jpg&quot;}}"" alt="""" />
+    </a>
+</div>","2019-03-19 10:35:00","2019-03-19 10:35:00","1"

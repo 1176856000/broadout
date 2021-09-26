@@ -1,0 +1,97 @@
+
+ module-sales/Model/Service/OrderService.php place() save catch 224:000001702--We can't save the address:
+Email has a wrong format
+ module-quote/Model/QuoteManagement.php submitQuote 581:1389
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:34:42
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:34:43
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:34:55
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:35:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:35:59
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:37:20
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:40:01
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:45:22
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 09:56:03
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 10:17:25
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 11:00:07
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 12:25:28
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 15:16:09
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-21 20:57:30
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-22 08:20:12
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-23 07:05:33
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-24 07:05:34
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001702--2020-12-25 07:05:35
+ module-sales/Model/Service/OrderService.php place() save catch 224:000001761--We can't save the address:
+Email has a wrong format
+ module-quote/Model/QuoteManagement.php submitQuote 581:1440
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:13:39
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:13:39
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:13:50
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:14:11
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:14:53
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:16:15
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:18:56
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:24:18
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:34:59
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 04:56:20
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 05:39:01
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 07:04:22
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 09:55:03
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-29 15:36:24
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-30 02:59:06
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2020-12-31 01:54:48
+ module-sales/Model/Service/OrderService.php place() save catch 224:000001784--We can't save the address:
+Email has a wrong format
+ module-quote/Model/QuoteManagement.php submitQuote 581:1461
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:32:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:32:27
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:32:38
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:32:59
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:33:40
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:35:01
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:37:44
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:43:05
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 21:53:46
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 22:15:07
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2020-12-31 22:57:49
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-01 00:23:10
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-01 01:54:50
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-01 03:13:51
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-01 08:55:13
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-01 20:17:55
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001761--2021-01-02 01:54:51
+ module-sales/Model/Service/OrderService.php place() save catch 224:000001799--We can't save the address:
+Email has a wrong format
+ module-quote/Model/QuoteManagement.php submitQuote 581:1474
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:05:57
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:05:58
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:06:09
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:06:31
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:07:12
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:08:34
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:11:15
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:16:36
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:27:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 03:48:38
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 04:31:19
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 05:56:40
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 08:47:21
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-02 14:28:42
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-02 19:03:16
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-03 01:51:24
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-03 19:03:17
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-04 00:36:45
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001784--2021-01-04 19:03:18
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-05 00:36:46
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. This transaction couldn't be completed. Please redirect your customer to PayPal (#10486: This transaction couldn't be completed).
+ module-quote/Model/QuoteManagement.php submitQuote 581:
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. The Buyer cannot pay with PayPal for this Transaction (#13113: Buyer Cannot Pay).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ module-sales/Model/Service/OrderService.php place catch Exception 221:PayPal gateway has rejected request. The Buyer cannot pay with PayPal for this Transaction (#13113: Buyer Cannot Pay).
+ module-quote/Model/QuoteManagement.php submitQuote Exception 581:
+ Model/Ipn.php  _getOrder 150:  _getOrder Exception 500:000001799--2021-01-06 00:36:47

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="customer_register_success">
+        <observer name="praffiliate_register" instance="Plumrocket\Affiliate\Observer\CustomerRegisterSuccess" shared="false" />
+    </event>
+    <event name="customer_login">
+        <observer name="praffiliate_login_success" instance="Plumrocket\Affiliate\Observer\CustomerLogin" shared="false" />
+    </event>
+    <event name="controller_front_send_response_before">
+        <observer name="praffiliate_awin1_server_to_server" instance="Plumrocket\Affiliate\Observer\AwinServerToServer" shared="false" />
+    </event>
+</config>

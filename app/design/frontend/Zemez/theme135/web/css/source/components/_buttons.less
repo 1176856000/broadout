@@ -1,0 +1,52 @@
+//
+//  Buttons
+//  _____________________________________________
+
+.lib-button() {
+    .lib-css(border-radius, @button__border-radius);
+    text-transform: uppercase;
+}
+
+.lib-button-primary() {
+    text-transform: uppercase;
+}
+
+& when (@media-common = true) {
+    button,
+    .action {
+        height: auto;
+        text-align: center;
+        transition: 0.3s all ease;
+        letter-spacing: 0.07em;
+        white-space: nowrap;
+
+        &:focus {
+            color: @color-black;
+        }
+
+        &:hover {
+            color: @color-black;
+        }
+
+        &.add,&.remove {
+            &:hover {
+                color: @color-white;
+            }
+        }
+    }
+
+    .action.default {
+        .lib-button();
+
+        &.white {
+            border-color: @color-white;
+            color: @color-white;
+
+            &:hover {
+                border-color: @color-black;
+                color: @color-black;
+                background: none;
+            }
+        }
+    }
+}

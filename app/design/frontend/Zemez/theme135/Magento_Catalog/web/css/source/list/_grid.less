@@ -1,0 +1,69 @@
+//
+//  Grid Variables
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .grid.products-grid {
+        .product-item-details {
+            padding-top: 15px;
+            text-align: left;
+            position: relative;
+        }
+
+        .timer-wrapper{
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 100%;
+        }
+
+        .product-item-wrap {
+            @media (min-width: @screen__s) {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            .product-item-name {
+                margin-bottom: 0;
+            }
+        }
+
+        .product-reviews-summary {
+            display: none;
+            @media (min-width: @screen__s) {
+                display: block;
+            }
+            .rating-summary {
+                display: inline-block;
+            }
+            .reviews-actions {
+                display: none;
+            }
+        }
+
+        .price-box {
+            margin-bottom: 5px;
+            margin-top: 5px;
+            @media (min-width: @screen__s) {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .grid.products-grid {
+
+        .product-item-wrap {
+            flex-wrap: nowrap;
+        }
+    }
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Plumrocket\Affiliate\Api\AffiliateProgramProviderInterface" type="Plumrocket\Affiliate\Model\AffiliateProvider" />
+    <preference for="Plumrocket\Affiliate\Api\AffiliateProgramTypeProviderInterface" type="Plumrocket\Affiliate\Model\AffiliateTypeProvider" />
+    <preference for="Plumrocket\Affiliate\Api\Data\AffiliateProgramTypeInterface" type="Plumrocket\Affiliate\Model\Data\AffiliateType" />
+    <preference for="Plumrocket\Affiliate\Api\PageTypeProviderInterface" type="Plumrocket\Affiliate\Model\PageType\Provider" />
+    <preference for="Plumrocket\Affiliate\Api\Data\PageTypeInterface" type="Plumrocket\Affiliate\Model\Data\PageType" />
+
+    <type name="Magento\Sales\Model\Order\CustomerManagement">
+        <plugin name="praffiliate_register_after" type="Plumrocket\Affiliate\Plugin\Sales\Model\Order\CustomerManagement" />
+    </type>
+    <type name="Plumrocket\Affiliate\Model\Affiliate\AffiliateWindow">
+        <arguments>
+            <argument name="curl" xsi:type="object" shared="false">Magento\Framework\HTTP\Client\Curl</argument>
+        </arguments>
+    </type>
+</config>

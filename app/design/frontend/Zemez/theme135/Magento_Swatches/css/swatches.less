@@ -1,0 +1,22 @@
+.swatch-opti123 {
+        padding: 20px 0;
+    }
+
+    .swatch-attribute-label {
+        font-weight: 700;
+        position: relative;
+
+        &.required {
+            padding-right: 10px;
+        }
+        &[data-required="1"]:after {
+            content: '*';
+            color: red;
+            position: absolute;
+            right: -11px;
+            top: -2px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+    }
+

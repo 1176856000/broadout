@@ -1,0 +1,17 @@
+/* 
+ *  Shop By Brand by Zemez 2016
+ *  v1.0.0
+ */
+
+// Font Icon
+.shopbybrand_font-icon(@_shopbybrand_icon: '\f105', @_shopbybrand_icon-family: @shopbybrand_icon-family) {
+  &:before{
+      display: inline-block;
+      font-family: @_shopbybrand_icon-family;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+      content: @_shopbybrand_icon;
+  }
+}

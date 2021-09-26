@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Plumrocket_Affiliate::css/affiliate.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Plumrocket\Affiliate\Block\Adminhtml\Creditmemo\Info" name="affiliate.creditmemo.info" template="Plumrocket_Affiliate::creditmemo/info.phtml" />
+        </referenceContainer>
+    </body>
+</page>

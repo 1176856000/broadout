@@ -1,0 +1,64 @@
+<?php
+/*
+
+Plumrocket Inc.
+
+NOTICE OF LICENSE
+
+This source file is subject to the End-user License Agreement
+that is available through the world-wide-web at this URL:
+http://wiki.plumrocket.net/wiki/EULA
+If you are unable to obtain it through the world-wide-web, please
+send an email to support@plumrocket.com so we can send you a copy immediately.
+
+DISCLAIMER
+
+Do not edit or add to this file
+
+@package    Plumrocket_Datagenerator
+@copyright    Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+@license    http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+
+*/
+?>
+
+<?php // phpcs:ignoreFile ?>
+
+<table width="100%">
+    <tr>
+        <td>
+            <div class="messages">
+                <div class="message">
+                    <?php echo __('Press "Refresh" if code is not displayed in text areas.'); ?><button id="init-codes-button" type="button" class="scalable" style="float: right; margin-top: -7px;"><span>Refresh</span></button>
+                </div>
+            </div>
+        </td>
+        <td style="width:200px" rowspan="2">
+            <div id="df-seetags" style="text-align: center;">
+                <a id="img-tags" href="http://wiki.plumrocket.com/wiki/Rss_Feed_Generator_Tags" target="_blank"></a>
+                <a href="http://wiki.plumrocket.com/wiki/Rss_Feed_Generator_Tags" target="_blank">Click here</a> to see full list<br /> of data feed tags.
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="code_block">
+                <h4>Header:</h4>
+                <textarea name="code_header" id="code_header"><?php echo htmlentities($this->getCodeHeader()); ?></textarea>
+            </div>
+            <div class="code_item">
+            <h4>Item Element:</h4>
+            <textarea name="code_item" id="code_item"><?php echo htmlentities($this->getCodeItem()); ?></textarea>
+            </div>
+            <div class="code_block">
+                <h4>Footer:</h4>
+                <textarea name="code_footer" id="code_footer"><?php echo htmlentities($this->getCodeFooter()); ?></textarea>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    var autocompleteAreasOpened  = false;
+    var nodes = <?php echo $this->getAttributes(); ?>;
+</script>

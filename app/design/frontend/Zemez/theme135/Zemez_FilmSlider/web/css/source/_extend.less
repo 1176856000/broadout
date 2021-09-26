@@ -1,0 +1,259 @@
+//
+//  Film Slider
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .slider-pro-wrapper {
+        .gutter-right-percentage{
+            @media (min-width: @screen__m) {
+                padding-right: 1.5%;
+            }
+        }
+        .banner-label {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: -0.06em;
+            padding-top: 10px;
+            span {
+                display: inline-block;
+                font-size: 45%;
+                line-height: 0.8;
+                letter-spacing: 0;
+                padding-left: 15px;
+            }
+        }
+        .tt-backg {
+            padding: 10px 13px;
+            background: @color-black;
+            letter-spacing: -0.3em;
+        }
+        .button-layer {
+            .action {
+                transform-origin: top left;
+                @media (max-width: (@screen__m - 1)) {
+                    transform: scale(2);
+                }
+                @media (max-width: (@screen__xs - 1)) {
+                    transform: scale(3);
+                }
+            }
+       }
+        .hidden-mobile {
+
+        }
+    }
+
+    //  Buttons
+    .sp-buttons {
+        position: absolute;
+        right: 0;
+        bottom: 13.43%;
+        width: auto;
+        left: auto;
+        text-align: right;
+        padding: 0 4% 0 0;
+    }
+
+    .sp-button {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        background: @color-white;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        + .sp-button {
+            margin-left: 15px;
+            @media (min-width: @screen__m) {
+                margin-left: 20px;
+            }
+            @media (min-width: @screen__xl) {
+                margin-left: 30px;
+            }
+        }
+
+        &:hover {
+            background: @color-black;
+        }
+    }
+    .sp-selected-button {
+        background: @color-black;
+        box-shadow: 0 0 0 5px @color-white;
+    }
+
+    @media (min-width: @screen__m) and (max-width: (@screen__l - 1)) {
+        .sp-button {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    @media (min-width: @screen__s) and (max-width: (@screen__m - 1)) {
+        .sp-button {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    /* Arrows
+    --------------------------------------------------*/
+
+    .sp-arrow {
+        position: absolute;
+        display: block;
+        width: auto;
+        height: auto;
+        line-height: 0;
+        color: @color-white;
+        cursor: pointer;
+        transition: .3s all ease;
+
+        &:hover {
+            color: @color-primary;
+        }
+    }
+
+    .sp-horizontal .sp-arrows {
+        margin-top: -25px;
+    }
+
+    .sp-previous-arrow,
+    .sp-next-arrow {
+        &:before {
+            position: static;
+            .font-icon__pseudo(@themeicon-arrows-1_minimal-left);
+            font-size: 50px;
+            line-height: 1;
+            background-color: transparent;
+            left: 0;
+            width: auto;
+            height: auto;
+        }
+        &:after {
+            display: none;
+        }
+    }
+
+    .sp-next-arrow:before {
+        content: @themeicon-arrows-1_minimal-right;
+        right: 0;
+        left: auto;
+    }
+
+    .slider-title {
+        font-weight: 700;
+        font-size: 102px;
+        line-height: 1.2;
+
+        &, a {
+            color: @color-white;
+        }
+
+        a {
+            transition: .3s all ease !important;
+
+            &:hover,
+            &:focus {
+                color: @color-primary;
+            }
+        }
+    }
+
+    .slider-desc {
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: @color-white;
+        display: none;
+
+        @media (min-width: @screen__xs) {
+            display: inline-block;
+        }
+    }
+
+    .slider-pro {
+        .btn {
+            .lib-button();
+        }
+
+        .btn-primary {
+            .lib-button-primary();
+
+            &:hover {
+                color: @color-default;
+                background: @color-white;
+            }
+        }
+
+        @media (min-width: @screen__l) {
+            .btn {
+                position: relative;
+                padding: 20px 38px;
+                overflow: hidden;
+                transition: .6s all ease !important;
+
+                &:before,
+                &:after {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0;
+                    position: absolute;
+                    transition: .4s;
+                    z-index: -1;
+                }
+
+                &:before {
+                    border-color: transparent transparent transparent @color-white;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:after {
+                    border-color: transparent @color-white transparent transparent;
+                    top: 0;
+                    right: 0;
+                }
+
+                &:hover {
+                    &:before {
+                        border-width: 165px 0 0 165px;
+                    }
+
+                    &:after {
+                        border-width: 0 165px 165px 0;
+                    }
+                }
+            }
+
+            .btn-primary {
+                &:hover {
+                    background: @color-primary;
+                }
+            }
+        }
+
+        @media (max-width: (@screen__xs - 1)) {
+            .btn-wrap {
+                transform: scale(0.736719) !important;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .slider-pro-wrapper {
+        .banner-label {
+            padding-top: 0;
+        }
+        .tt-backg {
+            padding: 0 10px;
+        }
+    }
+}

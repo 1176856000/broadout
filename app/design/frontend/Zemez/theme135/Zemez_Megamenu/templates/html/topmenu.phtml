@@ -1,0 +1,40 @@
+
+<?php if ($this->getNameInLayout() == 'catalog.topnav'): ?>
+    <?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+    <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+    <!-- Top Nav -->
+    <nav class="navigation <?php echo $this->_helper->isVertical() ? ' mobile-only' : ' tm-navigation tm-top-navigation' ?>" role="navigation" >
+        <ul data-mage-init='{"megamenu":{"menus": "li > ul:not(.mm-submenu), .megamenu-wrapper", "responsive":true, "expanded":true , "position":{"my":"left top","at":"left bottom"}, "differentPositionMenus":".megamenu-wrapper", "differentPosition":{"my":"left top","at":"left bottom","of":".navigation"}, "breakpointMobile":767, "delay":100}}'>
+            <?php /* @escapeNotVerified */ echo $_menu; ?>
+        </ul>
+	<!--
+	<style>
+        .storelanguage_dl{padding-top: 10px; border-top: 5px solid #d1d1d1; display: none;}
+.storelanguage_dl dt{font-size: 18px; padding: 0 15px; color: #575757;}
+.storelanguage_dl dd{padding: 0 15px; color: #575757; font-size: 14px; margin-bottom: 5px;}
+@media only screen and (max-width: 767px){
+  .storelanguage_dl{display: block;}
+}
+        </style>
+        <dl class="storelanguage_dl">
+      <dt>Language</dt>
+      <dd><a href="/">English</a></dd>
+      <dd><a href="/japan/">日本語</a></dd>
+    </dl>
+	-->
+    </nav>
+
+<?php endif;
+if($this->getNameInLayout() == 'catalog.sidebarnav' && $this->_helper->isVertical()): ?>
+    <?php $columnsLimit = $block->getColumnsLimit() ?: 0; ?>
+    <?php $_menu = $block->getHtml('level-top', 'submenu', $columnsLimit) ?>
+    <div class="sm-header-nav-wrap sm-header-nav-wrap__sidebar">
+        <!-- Sidebar Nav -->
+        <nav class="navigation tm-navigation desktop-only" role="navigation">
+            <ul data-mage-init='{"megamenu":{"menus": "li > ul:not(.mm-submenu), .megamenu-wrapper", "responsive":true, "expanded":true, "position":{"my":"left top","at":"right top"}, "breakpointMobile":767, "delay":100}}'>
+                <?php echo $_menu; ?>
+            </ul>
+        </nav>
+    </div>
+
+<?php endif; ?>

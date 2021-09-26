@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Datagenerator
+ * @copyright   Copyright (c) 2020 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Plumrocket\Datagenerator\Model\Feed\Resolver\FieldResolverInterface"
+                type="Plumrocket\Datagenerator\Model\Feed\Resolver\FieldComposite"/>
+    <preference for="Plumrocket\Datagenerator\Model\Feed\TagInterface"
+                type="Plumrocket\Datagenerator\Model\Feed\Tag"/>
+    <preference for="Plumrocket\Datagenerator\Model\Feed\Tag\ModifierInterface"
+                type="Plumrocket\Datagenerator\Model\Feed\Tag\ModifierComposite"/>
+    <preference for="Plumrocket\Datagenerator\Model\Feed\Tag\RendererInterface"
+                type="Plumrocket\Datagenerator\Model\Feed\Tag\Renderer"/>
+
+    <type name="Plumrocket\Datagenerator\Model\Feed\Resolver\FieldComposite">
+        <arguments>
+            <argument name="fieldResolvers" xsi:type="array">
+                <item name="url" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Url</item>
+                <item name="price" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Price</item>
+                <item name="special_price" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Price</item>
+                <item name="price_with_currency" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Price</item>
+                <item name="price_with_tax" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Price</item>
+                <item name="price_without_tax" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Price</item>
+                <item name="thumbnail_url" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Image</item>
+                <item name="image_url" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Image</item>
+                <item name="small_image_url" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Image</item>
+                <item name="short_description" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\Description</item>
+                <item name="media_gallery" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Resolver\Field\MediaGallery</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Plumrocket\Datagenerator\Model\Feed\Tag\ModifierComposite">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="date_format" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Tag\Modifier\DateFormatModifier</item>
+                <item name="replace" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Tag\Modifier\ReplaceModifier</item>
+                <item name="truncate" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Tag\Modifier\MaxStringLengthModifier</item>
+                <item name="size" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Tag\Modifier\ProductImageSizeModifier</item>
+                <item name="limit" xsi:type="object">Plumrocket\Datagenerator\Model\Feed\Tag\Modifier\LimitModifier</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

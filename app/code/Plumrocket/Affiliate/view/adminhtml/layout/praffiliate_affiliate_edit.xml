@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <body>
+        <referenceContainer name="content">
+            <block class="Plumrocket\Affiliate\Block\Adminhtml\Affiliate\Edit" name="praffiliate_affiliate_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Plumrocket\Affiliate\Block\Adminhtml\Affiliate\Edit\Tabs" name="praffiliate_affiliate_edit_tabs">
+                <block class="Plumrocket\Affiliate\Block\Adminhtml\Affiliate\Edit\Tab\Main" name="praffiliate_affiliate_edit_tab_main"/>
+                <block class="Plumrocket\Affiliate\Block\Adminhtml\Affiliate\Edit\Tab\Script" name="praffiliate_affiliate_edit_tab_script"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">praffiliate_affiliate_edit_tab_main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">scriptsection</argument>
+                    <argument name="block" xsi:type="string">praffiliate_affiliate_edit_tab_script</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

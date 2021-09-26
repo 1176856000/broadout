@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2019 Amasty (https://www.amasty.com)
+ * @package Amasty_ReviewsImportExport
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Amasty\ReviewsImportExport\Model\Import\ValidatorPool" type="Amasty\Base\Model\Import\Validation\ValidatorPool">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="basic" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Validation\Basic</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="Amasty\ReviewsImportExport\Model\Import\Behavior\BehaviorProvider" type="Amasty\Base\Model\Import\Behavior\BehaviorProvider">
+        <arguments>
+            <argument name="behaviors" xsi:type="array">
+                <item name="custom" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Behaviors\Add</item>
+                <item name="add_update" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Behaviors\AddUpdate</item>
+                <item name="delete" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Behaviors\Delete</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Amasty\ReviewsImportExport\Model\Import">
+        <arguments>
+            <argument name="entityTypeCode" xsi:type="string">import_reviews</argument>
+            <argument name="validatorPool" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\ValidatorPool</argument>
+            <argument name="behaviorProvider" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Behavior\BehaviorProvider</argument>
+            <argument name="mapping" xsi:type="object">Amasty\ReviewsImportExport\Model\Import\Mapping</argument>
+        </arguments>
+    </type>
+
+    <virtualType name="amastyImportReviews" type="Magento\Framework\DataObject">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="import_reviews" xsi:type="string">Amasty_ReviewsImportExport</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Amasty\Base\Component\ComponentRegistrar">
+        <arguments>
+            <argument name="samples" xsi:type="object">amastyImportReviews</argument>
+        </arguments>
+    </type>
+    <virtualType name="sampleFile" type="Magento\ImportExport\Model\Import\SampleFileProvider">
+        <arguments>
+            <argument name="samples" xsi:type="array">
+                <item name="import_reviews" xsi:type="string">Amasty_ReviewsImportExport</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\ImportExport\Model\Import\SampleFileProvider">
+        <arguments>
+            <argument name="samples" xsi:type="array">
+                <item name="import_reviews" xsi:type="string">Amasty_ReviewsImportExport</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\AdvancedPricingImportExport\Controller\Adminhtml\Export\GetFilter">
+        <plugin name="Amasty_ReviewsImportExport::ExportFilter" type="Amasty\ReviewsImportExport\Plugin\ImportExport\Controller\Adminhtml\Export\GetFilterPlugin" />
+    </type>
+    <type name="Magento\ImportExport\Controller\Adminhtml\Export\GetFilter">
+        <plugin name="Amasty_ReviewsImportExport::ExportFilter" type="Amasty\ReviewsImportExport\Plugin\ImportExport\Controller\Adminhtml\Export\GetFilterPlugin" />
+    </type>
+    <type name="Magento\ImportExport\Controller\Adminhtml\Export\Export">
+        <plugin name="Amasty_ReviewsImportExport::ExportExport" type="Amasty\ReviewsImportExport\Plugin\ImportExport\Controller\Adminhtml\Export\ExportPlugin" />
+    </type>
+</config>

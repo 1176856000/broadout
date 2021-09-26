@@ -1,0 +1,2 @@
+For installation Instructions please read our online documentation: 
+http://wiki.plumrocket.com/wiki/Magento_2_Data_Feed_Generator_Extension_v2.x

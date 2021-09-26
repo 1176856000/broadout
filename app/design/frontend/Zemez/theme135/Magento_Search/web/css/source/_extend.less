@@ -1,0 +1,187 @@
+//
+//  Search mini form
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .block-search {
+        margin: 0;
+
+        .block-title,
+        .block-content .nested {
+            display: none;
+        }
+
+        form {
+            button.action.search {
+                .font-icon(@themeicon-search);
+                color: @color-dark;
+                right: 0;
+                &:hover {
+                    color: @color-primary;
+                }
+                &:before {
+                    font-size: 22px;
+                    line-height: 40px;
+                    width: 100%;
+                    text-align: center;
+                }
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .block-search {
+            form {
+                button.action.search {
+                    right: auto;
+                    left: 1px;
+                }
+            }
+        }
+    }
+}
+
+//
+//  Mobile view Search
+//-----------------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+    & when (@media-target = 'mobile') {
+        .block-search {
+            #search_mini_form {
+                &,
+                > .search {
+                    position: fixed;
+                    z-index: 1001;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    height: 0;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .ui-dialog-buttonpane {
+                    display: none;
+                }
+            }
+
+            .search .label {
+                .toggle-icons-via-rotation(
+                    @_size: @sm-header-panel-height,
+                    @_font-size: 24px,
+                    @_color: @sm-header-contrast-color,
+                    @_icon-before: @themeicon-search,
+                    @_icon-after: @themeicon-close1,
+                    @_trigger-class: active);
+                display: block;
+                position: fixed;
+                z-index: 11;
+                top: 0;
+                right: (@sm-header-panel-height + 60);
+                width: @sm-header-panel-height;
+                height: @sm-header-panel-height;
+                background: transparent;
+                &:after {
+                    color: @color-light;
+                }
+
+                span {
+                    display: none;
+                }
+
+                &.active {
+                    right: 0;
+                    z-index: 99;
+                    transition: right .3s ease;
+                    &:hover:after {
+                        color: @color-primary;
+                    }
+                }
+            }
+
+            .field.search .control {
+                input {
+                    border-radius: 0;
+                    height: @sm-header-panel-height;
+                    background: @color-white;
+                    border: none;
+                    font-size: 16px;
+                    line-height: 20px;
+                    padding: 16px 5px 16px 5px;
+                    margin: 0;
+                    transition: .3s ease;
+                }
+            }
+        }
+
+        // RTL
+        html.rtl {
+            .block-search {
+                .search .label {
+                    right: auto;
+                    left: (2*@sm-header-panel-height + 10);
+
+                    &.active {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop view Search
+//-----------------------------------------------
+& when (@media-target = 'desktop') {
+    .block-search {
+        float: none;
+        width: auto;
+
+        #search_mini_form {
+            .search .label {
+                display: none;
+            }
+
+            .field {
+                padding: 0;
+            }
+
+            .control {
+                position: static;
+                top: auto;
+                right: auto;
+                left: auto;
+            }
+            .action.search{
+                width: 40px;
+                height: 40px;
+                padding: 0;
+            }
+                button.action.search {
+                    &:before {
+                        border-radius: 0;
+                        color: @color-white;
+                        background: @color-primary;
+                    }
+                    &:hover{
+                        &:before{
+                            background: @color-dark;
+                        }
+                    }
+                }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .block-search {
+            padding-right: 0;
+        }
+    }
+}

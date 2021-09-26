@@ -1,0 +1,18 @@
+{
+    "name": "plumrocket/module-affiliate",
+    "description": "Affiliate Programs Extension for Magento 2",
+    "require": {
+        "php": ">=7.1",
+        "plumrocket/module-plumbase": ">=2.5"
+    },
+    "type": "magento2-module",
+    "version": "3.0.0",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Plumrocket\\Affiliate\\": ""
+        }
+    }
+}

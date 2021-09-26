@@ -1,0 +1,122 @@
+/*
+* @section      Custom pages
+* @description  This section holds specific style for Static blocks
+*/
+
+& when (@media-target = 'mobile') {
+    .block-static-block.widget {
+        margin-bottom: 46px;
+        @media (min-width: @screen__m) {
+            .gutter-right-percentage {
+                padding-right: 1.134%;
+            }
+
+            .gutter-left-percentage {
+                padding-left: 1.134%;
+            }
+        }
+    }
+    .banner {
+        display: block;
+        position: relative;
+        margin-top: 20px;
+
+        .action {
+            transform: scale(0.7);
+        }
+
+        h1 {
+            @media (min-width: @screen__xl) and (max-width: (@screen__xxl - 1)) {
+                font-size: 42px;
+            }
+            @media (min-width: @screen__m) and (max-width: (@screen__xl - 1)) {
+                font-size: 24px;
+            }
+            @media (min-width: @screen__xs)and (max-width: (@screen__m - 1)) {
+                font-size: 38px;
+            }
+
+            span {
+                display: inline-block;
+                padding: 4px 8px;
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            .make-flex();
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: flex-start;
+            padding: 14px;
+
+            @media (min-width: @screen__xs) {
+                padding: 10%;
+            }
+
+            &.top {
+                justify-content: flex-start;
+            }
+
+            &.left {
+                align-items: flex-start;
+            }
+
+            &.right {
+                align-items: flex-end;
+            }
+
+            &.bottom {
+                justify-content: flex-end;
+            }
+
+            &.text-center {
+                text-align: center;
+            }
+        }
+
+        &.hovered {
+            overflow: hidden;
+
+            img {
+                transition: transform 0.5s ease;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.2);
+                    transition-duration: 1.3s;
+                }
+            }
+
+            .banner-content {
+                z-index: 1;
+            }
+        }
+    }
+
+    a.banner {
+        color: inherit;
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .banner {
+        .action {
+            transform: none;
+        }
+        * + .action {
+            margin-top: 10px;
+        }
+    }
+}

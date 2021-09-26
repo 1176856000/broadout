@@ -1,0 +1,148 @@
+//
+//  Navigation
+//  _____________________________________________
+
+.lib-main-navigation-desktop() {
+    .navigation {
+        > ul {
+            margin-left: -@navigation-desktop-level0-item__offset;
+            @media (min-width: @screen__xl) {
+                border-left: 1px solid @border-color__base;
+            }
+        }
+
+        .level0 {
+            > .level-top {
+                font-family: @font-family__primary;
+                text-transform: uppercase;
+                .lib-css(font-size, @navigation-desktop-level0-item__font-size);
+                .lib-css(font-weight, @navigation-desktop-level0-item__font-weight);
+
+                &.ui-state-active {
+                    .lib-css(background, @navigation-desktop-level0-item__hover__background);
+                    .lib-css(border, @navigation-desktop-level0-item__hover__border);
+                    .lib-css(color, @navigation-desktop-level0-item__hover__color);
+                }
+            }
+
+            &.parent {
+                > .level-top {
+                    padding-right: 0;
+                    > .ui-menu-icon {
+                        display: none;
+                    }
+                }
+            }
+
+            .submenu {
+                a {
+                    &.ui-state-active {
+                        .lib-css(background, @submenu-desktop-item__hover__background);
+                        .lib-css(border, @submenu-desktop-item__hover__border);
+                        .lib-css(color, @submenu-desktop-item__hover__color);
+                    }
+                }
+
+                li {
+                    &.parent {
+                        > a {
+                            > .ui-menu-icon {
+                                right: 8px;
+                                transition: 0.3s right ease;
+                                &:after {
+                                    .font-icon__pseudo(@themeicon-arrows-1_minimal-right);
+                                    font-size: 12px;
+                                    line-height: 1;
+                                }
+                            }
+
+                            &.ui-state-focus, &.ui-state-active {
+                                > .ui-menu-icon {
+                                    right: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: (@screen__xxl - 1)) {
+            > ul {
+                margin-left: -20px;
+            }
+
+            .level0 {
+                margin-left: 20px;
+                > .level-top {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    nav.navigation {
+        ul {
+            padding-left: 0;
+            padding-right: 0;
+            @media (min-width: @screen__xxl) {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+& when (@media-target = 'mobile') {
+    .sm-header-nav-wrap {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .sm-header-nav-wrap {
+        background: @color-white;
+        > .container {
+            .make-flex();
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            @media (max-width: (@screen__xl - 1)) {
+                flex-wrap: wrap;
+                nav.navigation {
+                    order: 1;
+                    flex-basis: 100%;
+                    padding-left: 0;
+                    margin-top: 10px;
+                }
+
+                .block-search {
+                    flex-grow: 1;
+                    margin-left: 40px;
+                }
+            }
+            .logo img {
+                display: block;
+            }
+            .block-search {
+
+            }
+            .minicart-wrapper {
+
+            }
+        }
+
+        nav.navigation {
+            position: static;
+            .make-flex();
+            justify-content: center;
+            width: auto;
+            flex-grow: 1;
+            padding-left: 20px;
+        }
+
+        // RTL
+        html.rtl {
+
+        }
+    }
+}

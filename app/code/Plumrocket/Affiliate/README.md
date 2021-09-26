@@ -1,0 +1,1 @@
+Affiliate Programs Extension for M2

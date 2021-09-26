@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright 漏 2019 Zemez. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Zemez\ProductExtra\Block\Product\View\Extra"
+                   name="product.view.extra"
+                   template="Zemez_ProductExtra::product/view/extra.phtml"
+                   after="product.info.overview">
+            </block>
+            <block class="Zemez\ProductExtra\Block\Product\View\Extra" name="product.view.goin" template="Zemez_ProductExtra::product/view/goin.phtml"/>
+            <block class="Zemez\ProductExtra\Block\Product\View\ProductReviews" name="product.view.reviews" template="Zemez_ProductExtra::product/view/reviews.phtml"/>
+        </referenceContainer>
+
+    </body>
+</page>

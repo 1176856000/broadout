@@ -1,0 +1,85 @@
+<?php
+/**
+ * Copyright © 2019 Zemez. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$_product = $block->getProduct();
+//echo $_product->getName();
+$amazon_url = $_product->getResource()->getAttribute('amazon_url')->getFrontend()->getValue($_product);
+$guarantee = $_product->getResource()->getAttribute('guarantee')->getFrontend()->getValue($_product);
+?>
+
+
+
+<style type="text/css">
+.add_btn {
+	color: #000400;
+	width: 260px;
+	cursor: pointer;
+	background: linear-gradient(#f5d892, #edb836);
+	height: 42px;
+	border: 1px solid #926603;
+	border-radius: 999px;
+	text-align: center;
+	line-height: 42px;
+	font-size: 14px;
+}
+
+.add_btn:hover {
+	background: linear-gradient(#edb836, #edb836);
+}
+.add_btn a:hover{
+	color: #000400;
+}
+.add_btn a{
+	color:#000400;
+}
+
+.add_text {
+	width: 415px;
+	height: auto;
+	background: #f1eff0;
+	padding: 18px 14px;
+	text-align: left;
+	"
+
+}
+</style>
+<!--
+<div class="product-paypal-pic">
+<div class="product-addto-paypal-pic" data-role="add-to-links">
+
+	<img style="width: 240px;height: 35px;" src="<?= $block->escapeUrl($block->getViewFileUrl('images/paypal.png')); ?>" alt="paypal" />
+
+</div>
+</div>
+-->
+
+<?php if (!empty($amazon_url)): ?>
+<div class="product-amazon-url">
+<div class="product-addto-amazon-url" data-role="add-to-links">
+
+	<div class="add_btn">
+		<a target="_blank" id="amazon_url"  rel="nofollow" href="<?php echo $amazon_url; ?>" style="font-weight:600;">BUY ON AMAZON</a>
+	</div>
+
+</div>
+</div>
+<?php endif;?>
+<?php if (!empty($guarantee)): ?>
+<div class="product-social-guarantee">
+<div class="product-addto-guarantee" data-role="add-to-links">
+	<div class="add_text">
+		<p style="margin-bottom: 0;">
+			 
+			<?php echo $guarantee; ?>
+
+		</p>
+
+	</div>
+</div>
+</div>
+<?php endif;?>

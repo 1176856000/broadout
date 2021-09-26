@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="500">
+            <label>Magenest</label>
+        </tab>
+        <section id="magenest" translate="label" type="text"
+                 sortOrder="100" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Coupon Code</label>
+            <tab>magenest</tab>
+            <resource>Magenest_CouponCode::couponcode</resource>
+            <group id="couponlisting" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1"
+                   translate="label">
+                <label>Coupon listing settings</label>
+                <field id="enable" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label"
+                       type="select" canRestore="1">
+                    <label>Enable Coupon Listing</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable/Disable Coupon Code Listing.</comment>
+                    <config_path>magenest/couponlisting/enable</config_path>
+                </field>
+                <field id="showField" translate="label" type="multiselect" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Fields</label>
+                    <comment><![CDATA[Fields is chosen to show external storefront.
+                    </br><font color="red">You should select at least two options:</font> <strong>Coupon Code</strong> and <strong>Description</strong>.]]></comment>
+                    <source_model>Magenest\CouponCode\Model\System\Config\Source\SelectMultipleField</source_model>
+                    <validate>validate-no-empty</validate>
+                    <config_path>magenest/couponlisting/showField</config_path>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                </field>
+            </group>
+            <group id="couponcode" translate="label comment" type="text"
+                   sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Coupon rules settings</label>
+                <comment><![CDATA[The coupon code listing is displayed base on rules in cart price rules that are Active, Websites, Customer Group, Specific coupon, Use Auto Generation, Uses Per Coupon, Uses Per Customer, From Date and To Date attributes.
+                </br>You can customize the external code display through the above attributes.
+                </br>However, Attributes are applied by default: Specific coupon and Use Auto Generation (NOT Use).]]></comment>
+                <field id="website_id" translate="label comment"
+                       type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Website</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/website_id</config_path>
+                    <comment>If disable, this field will be display coupon codes from other websites</comment>
+                </field>
+                <field id="customer_group" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Customer Group</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/customer_group</config_path>
+                    <comment>If disable, this field will be display coupon codes from other customer group</comment>
+                </field>
+                <field id="is_active" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Active</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/is_active</config_path>
+                    <comment>If disable, this field will be display also inactive coupon codes</comment>
+                </field>
+                <field id="from_date" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>From Date</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/from_date</config_path>
+                    <comment>If disable, this field will be display coupon codes which have not started yet</comment>
+                </field>
+                <field id="to_date" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>To Date</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/to_date</config_path>
+                    <comment>If disable, this field will be display coupon codes which out of date</comment>
+                </field>
+                <field id="usage_limit" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Uses Per Coupon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/usage_limit</config_path>
+                    <comment>If disable, this field will be display coupon codes which usage limit exceeded</comment>
+                </field>
+                <field id="usage_per_customer" translate="label comment"
+                       type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Uses Per Customer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magenest/couponcode/usage_per_customer</config_path>
+                    <comment>If disable, this field will be display coupon codes which usage limit exceeded per customer</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

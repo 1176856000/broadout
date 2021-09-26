@@ -1,0 +1,45 @@
+//
+//  Sections
+//  _____________________________________________
+
+.lib-data-tabs__base() {
+    > .item.title {
+        > .switch {
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+    }
+
+    > .item.content {
+
+    }
+}
+
+.lib-data-accordion__base() {
+    > .item.title {
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            line-height: @accordion-control__line-height;
+            padding: 0 @accordion-control__padding-bottom;
+            cursor: pointer;
+        }
+        .font-icon(@themeicon-arrows-1_minimal-up);
+        &[aria-expanded="false"]:before {
+            content: @themeicon-arrows-1_minimal-down;
+        }
+
+        > .switch {
+            text-transform: uppercase;
+        }
+        &.active > .switch {
+            color: @accordion-control__active__color;
+        }
+    }
+
+    > .item.content {
+
+    }
+}

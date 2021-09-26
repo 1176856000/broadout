@@ -1,0 +1,262 @@
+//
+//  Header Menu Styles
+//  _____________________________________________
+
+//
+//  Header Menu Styles
+//  _____________________________________________
+
+& when (@media-target = 'mobile') {
+    // Main Styles
+    .navigation.tm-navigation {
+        li.level-top {
+            .tm-megamenu {
+                // FIRST level
+                ul.level1 > li > a {
+                    font-weight: @font-weight__bold;
+                    text-transform: uppercase;
+                }
+                li.item {
+                    a {
+                        font-weight: @font-weight__regular;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: (@screen__m - 1)) {
+        nav.tm-navigation {
+            a > span {
+                position: relative;
+            }
+
+            .mm-image {
+                display: none;
+            }
+
+            .widget, .video, .static-block, .product {
+                display: none;
+            }
+
+            .ui-menu-item.parent > a {
+                padding-right: 50px;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            .parent {
+                > a {
+                    position: relative;
+                }
+
+                .ui-menu-icon {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: @navigation-level0-item__padding;
+                    padding-right: 20px;
+
+                    &:after {
+                        font-family: @mobile-menu_icon-font;
+                        content: @mobile-menu_icon;
+                    }
+                }
+
+                a.ui-state-active {
+                    > .ui-menu-icon:after {
+                        content: @mobile-menu_icon-active;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    // Main Styles
+    nav.tm-navigation {
+        position: relative;
+        box-sizing: border-box;
+
+        > ul {
+            position: static;
+        }
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+        }
+
+        .level0 {
+            > .ui-menu {
+                top: 100%;
+                left: 0;
+            }
+
+            &.megamenu-wrapper-parent {
+                position: static;
+            }
+
+            .submenu {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+                transform: translateY(5%);
+                transform-origin: top center;
+                transition: .2s ease;
+
+                &[aria-expanded=true] {
+                    visibility: visible;
+                    opacity: 1;
+                    z-index: 9999;
+                    transform: none;
+                    transition-duration: .3s;
+                }
+            }
+
+            > .ui-menu {
+                top: 100% !important;
+                left: 0 !important;
+            }
+
+            .submenu .submenu-reverse {
+                right: auto;
+            }
+
+        .mm-label {
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            padding: 2px 5px;
+            text-transform: uppercase;
+            font-size: @mega-menu_label-font-size;
+            line-height: @mega-menu_label-font-size * 1.2;
+            color: @mega-menu_label-color;
+            background-color: @mega-menu_label-bg;
+        }
+
+            li {
+                position: relative;
+            }
+
+            .mm-image {
+                display: none;
+                margin-bottom: 10px;
+
+                @media (min-width: @screen__m) {
+                    display: inline-block;
+                }
+
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            &.megamenu-wrapper-parent {
+                position: static;
+            }
+
+            .megamenu-wrapper {
+                top: 100% !important;
+                left: 0 !important;
+                width: 100%;
+                background: @mega-menu_menu-bg;
+                box-shadow: @mega-menu_shadow-medium;
+
+                [class*="col-"]:not(:last-child){
+                    border-right: 1px solid @color-lightest-2;
+                }
+
+                .container {
+                    padding: 40px 40px 25px;
+
+                    .banner {
+                        margin-top: 0;
+                        padding: 0;
+                    }
+                }
+            }
+
+            ul.mm-submenu {
+                display: block;
+                padding: 0;
+            }
+
+            .tm-megamenu {
+                // FIRST level
+
+                ul.level1 > li > a {
+                    position: relative;
+                    font-weight: @font-weight__bold;
+                    text-transform: uppercase;
+                    margin-bottom: 15px;
+                }
+
+                li.item {
+                    a {
+                        display: inline-block;
+                        background: none;
+                        color: @color-dark;
+                        font-weight: @font-weight__regular;
+                        padding: 0;
+                        &:hover {
+                            color: @color-primary;
+                        }
+                    }
+                    & + li {
+                        margin-top: 10px;
+                    }
+                }
+
+                // Product
+                .product {
+                    .product-image {
+                        margin-bottom: 10px;
+
+                        a {
+                            display: block;
+                            border: solid 1px @mega-menu_menu-border;
+                            background: none;
+                        }
+                    }
+                    .product-name {
+                        text-transform: uppercase;
+                        display: block;
+                        margin-bottom: 5px;
+                        a {
+                            padding: 0;
+                            color: @mega-menu_name-color;
+
+                            &:hover {
+                                background: none;
+                                color: @mega-menu_name-color-hover;
+                            }
+                        }
+                    }
+                    .price-box {
+                        font-weight: bold;
+
+                        .price {
+                            font-size: 1.2em;
+                            line-height: 1.2em;
+                        }
+                        .old-price {
+                            font-size: 1em;
+                            text-decoration: line-through;
+                        }
+                        .special-price {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

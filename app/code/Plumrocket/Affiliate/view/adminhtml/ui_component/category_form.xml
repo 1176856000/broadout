@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2017 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="affiliate_programs">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Affiliate Programs</item>
+                <item name="collapsible" xsi:type="boolean">true</item>
+                <item name="sortOrder" xsi:type="number">100</item>
+            </item>
+        </argument>
+        <field name="affiliate_webgains_eventid">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">WebGains Event ID</item>
+                    <item name="dataType" xsi:type="string">int</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="number">270</item>
+                </item>
+            </argument>
+        </field>
+        <field name="affiliate_aw_commission_group">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">AWIN Commission Group</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="number">280</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

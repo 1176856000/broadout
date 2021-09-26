@@ -1,0 +1,2 @@
+review_id,created_at,entity_pk_value,status_id,answer,verified_buyer,is_recommended,store_ids,title,detail,nickname,customer_id,like_about,not_like_about,guest_email,rating,likes,image
+5,2019-09-02 09:30:13,2032,1,test,0,1,"0,1",12,test,test,1,test,test,1,"{""option_id"": 18, ""rating_id"": 4}","127.0.0.1,1","{""images"": ""/i/c/test.png""}"

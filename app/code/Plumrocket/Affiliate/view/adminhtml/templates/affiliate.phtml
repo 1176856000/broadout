@@ -1,0 +1,49 @@
+<?php
+/**
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ */
+
+/** @var \Plumrocket\Affiliate\Block\Adminhtml\Affiliate\NewAffiliate\Form $block */
+?>
+
+<div class="affilate__title">
+    <span><?= $block->escapeHtml(__('Select Affiliate Program from the list and click Continue')) ?></span>
+    <div class="search__wrp">
+        <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.663 15.505L20 21M9.145 17.099c4.498 0 8.145-3.604 8.145-8.05C17.29 4.604 13.643 1 9.145 1 4.647 1 1 4.604 1 9.05c0 4.445 3.647 8.049 8.145 8.049z" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+        </svg>
+        <input class="search__field" type="text" id="affiliate-program-search" placeholder="<?= $block->escapeHtmlAttr(__('Search Affiliate Program')) ?>">
+    </div>
+</div>
+
+<form id="edit_form" class="affilate__form" action="<?= $block->escapeUrl($block->getUrl('*/*/edit')) ?>" method="get">
+    <div class="affilate__list">
+        <?php foreach ($block->getAliveTypes() as $type): ?>
+        <div class="affilate__item-wrp">
+            <input type="radio"
+                   id="affiliate_type_<?= /* @noEscape */ $type->getId() ?>"
+                   name="type_id"
+                   value="<?= /* @noEscape */ $type->getId() ?>"
+                    style="display: none"
+            />
+            <label for="affiliate_type_<?= /* @noEscape */ $type->getId() ?>">
+                <?php if ($logo = $type->getLogo()): ?>
+                    <img src="<?= /* @noEscape */ $block->getViewFileUrl($logo) ?>"
+                         alt="<?= $block->escapeHtmlAttr($type->getName()) ?>" />
+                <?php else: ?>
+                    <span><?= $block->escapeHtml($type->getName()) ?></span>
+                <?php endif; ?>
+            </label>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</form>
+<script>
+    require([
+        'Plumrocket_Affiliate/js/affiliate-chooser'
+    ], function (affiliateChooser) {
+        affiliateChooser.initSearch('<?= /* @noEscape */ $block->getSearchJsonConfig() ?>');
+    });
+</script>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="head.additional">
+            <block class="Plumrocket\Affiliate\Block\Section" name="praffiliate_section_head">
+                 <action method="setSection">
+                        <argument name="section" xsi:type="string">head</argument>
+                 </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="after.body.start">
+            <block class="Plumrocket\Affiliate\Block\Section" name="praffiliate_section_bodybegin" before="content">
+                 <action method="setSection">
+                        <argument name="section" xsi:type="string">bodybegin</argument>
+                 </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="before.body.end">
+            <block class="Plumrocket\Affiliate\Block\Section" name="praffiliate_section_bodyend">
+                <action method="setSection">
+                        <argument name="section" xsi:type="string">bodyend</argument>
+                 </action>
+            </block>
+            <block class="Plumrocket\Affiliate\Block\Onload" name="praffiliate_section_onpageload" />
+        </referenceContainer>
+    </body>
+</page>

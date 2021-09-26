@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Plumrocket_Affiliate::praffiliate" title="Affiliate Programs" module="Plumrocket_Affiliate" parent="Plumrocket_Base::elements" sortOrder="113915" resource="Plumrocket_Affiliate::praffiliate" />
+        <add id="Plumrocket_Affiliate::manage_praffiliate" title="Manage Affiliate Programs" module="Plumrocket_Affiliate" parent="Plumrocket_Affiliate::praffiliate" sortOrder="10" action="praffiliate/affiliate/" resource="Plumrocket_Affiliate::praffiliate"/>
+        <add id="Plumrocket_Affiliate::praffiliate_configuration" title="Configuration" module="Plumrocket_Affiliate" parent="Plumrocket_Affiliate::praffiliate" sortOrder="20" action="adminhtml/system_config/edit/section/praffiliate" resource="Plumrocket_Affiliate::config_praffiliate"/>
+    </menu>
+</config>

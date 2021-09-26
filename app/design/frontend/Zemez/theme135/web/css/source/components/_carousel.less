@@ -1,0 +1,93 @@
+//
+//  Carousel custom styles
+//  _____________________________________________
+
+& when (@media-target = 'mobile') {
+    .owl-carousel {
+        .owl-stage {
+            .make-flex();
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        div.owl-nav {
+            position: absolute;
+            top: -48px;
+            right: (@gutter__width / 2);
+            .make-flex();
+            align-items: center;
+            justify-content: center;
+
+            button.owl-prev,
+            button.owl-next {
+                font-size: 26px;
+                line-height: 1;
+                width: 15px;
+                transition: .3s all ease;
+                &:hover {
+                    transform: scale(1.5);
+                    color: @color-black;
+                }
+            }
+
+            button.owl-prev {
+                .font-icon('\f104', 'FontAwesome');
+            }
+
+            button.owl-next {
+                .font-icon('\f105', 'FontAwesome');
+            }
+
+            button.owl-prev + button.owl-next {
+                margin-right: 0;
+                margin-left: 10px;
+            }
+        }
+
+        .owl-dots {
+            width: 100%;
+            padding-left: (@gutter__width / 2);
+            padding-right: (@gutter__width / 2);
+            text-align: center;
+            box-sizing: border-box;
+            button.owl-dot {
+                width: 15px;
+                height: 15px;
+                border-radius: 15px;
+                background: @color-lightest;
+                transition: .3s ease;
+
+                &.active, &:hover {
+                    background: @color-default;
+                }
+
+                & + button.owl-dot {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .owl-carousel {
+            .owl-nav {
+                right: auto;
+                left: 15px;
+                button.owl-prev + button.owl-next {
+                    margin-right: 10px;
+                    margin-left: 0;
+                }
+            }
+
+            .owl-dots {
+                button.owl-dot {
+                    & + button.owl-dot {
+                        margin-left: 0;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

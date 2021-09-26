@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Datagenerator
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Plumrocket_Datagenerator::css/style.css" />
+        <css src="Plumrocket_Datagenerator::css/codemirror.css" />
+        <css src="Plumrocket_Datagenerator::css/jquery.ui.autocomplete.css" />
+        <css src="Plumrocket_Datagenerator::css/app.css" />
+        <css src="Plumrocket_Datagenerator::css/jquery.ui.theme.css" />
+        <link src="Plumrocket_Datagenerator::js/form/ext-tree.js"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit" name="prdatagenerator.edit" />
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tabs" name="prdatagenerator_datagenerator_edit_tabs">
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\General" name="prdatagenerator_datagenerator_edit_tab_general"/>
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\Rules" name="prdatagenerator_datagenerator_edit_tab_rules"/>
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\Editor" name="prdatagenerator_datagenerator_edit_tab_editor" template="editor.phtml"/>
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\Category" name="prdatagenerator_datagenerator_edit_tab_category"/>
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\Schedule" name="prdatagenerator_datagenerator_edit_tab_schedule"/>
+                <block class="Plumrocket\Datagenerator\Block\Adminhtml\Datagenerator\Edit\Tab\Upload" name="prdatagenerator_datagenerator_edit_tab_upload"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">general_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_general</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">rules_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_rules</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">editor_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_editor</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">category_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_category</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">schedule_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_schedule</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">upload_section</argument>
+                    <argument name="block" xsi:type="string">prdatagenerator_datagenerator_edit_tab_upload</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

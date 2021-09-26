@@ -1,0 +1,108 @@
+//
+//  List
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .list.products-list {
+        .product-item-info {
+            position: relative;
+            .make-flex();
+            align-items: flex-start;
+
+            .timer-wrapper{
+                max-width: 300px;
+            }
+
+            a.product-item-photo {
+                flex-basis: 42%;
+                max-width: 42%;
+            }
+
+            .product-item-details {
+                flex-basis: 58%;
+                max-width: 58%;
+                padding-left: 12px;
+
+                .product-reviews-summary {
+                    margin-left: 0;
+                    margin-right: 0;
+                    margin-bottom: 12px;
+                    @media (max-width: (@screen__xs - 1)) {
+                        .reviews-actions {
+                            display: none;
+                        }
+                    }
+
+                    .reviews-actions{
+                        .add {
+                            display: none;
+                        }
+                    }
+                }
+
+                .price-box {
+                    margin-bottom: 7px;
+                }
+
+                .product-item-description {
+                    @media (max-width: (@screen__s - 1)) {
+                        display: none;
+                    }
+                }
+
+                @media (min-width: @screen__xs) {
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .product-item + .product-item {
+            margin-top: 35px;
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .list.products-list {
+            .product-item-info {
+                .product-item-details {
+                    padding-left: 0;
+                    padding-right: 12px;
+
+                    @media (min-width: @screen__xs) {
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+    .list.products-list {
+        .product-item-info {
+            a.product-item-photo {
+                flex-basis: 32%;
+                max-width: 32%;
+            }
+
+            .product-item-details {
+                flex-basis: 68%;
+                max-width: 68%;
+                padding-left: 36px;
+            }
+        }
+    }
+
+    // RTL
+    html.rtl {
+        .list.products-list {
+            .product-item-info {
+                .product-item-details {
+                    padding-left: 0;
+                    padding-right: 36px;
+                }
+            }
+        }
+    }
+}

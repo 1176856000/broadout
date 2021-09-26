@@ -1,0 +1,101 @@
+
+& when (@media-target = 'mobile'){
+// Main styles
+    .block.related-posts {
+        .block-title {
+            margin-bottom: 30px;
+        }
+
+        .related-post-list {
+            padding: 0;
+            overflow: hidden;
+            margin: -1px 0 0 0;
+            list-style: none;
+
+            li {
+                box-sizing: border-box;
+                margin-bottom: 0;
+
+                h5.post-title{
+                    margin: 0;
+                    font-weight: normal;
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        transition: .2s;
+                        font-size: 14px;
+                        line-height: @blog_post-title-height;
+                        color: @blog_post-title-color;
+                        border-top: solid 1px @blog_post-title-border;
+
+                        &:hover {
+                            background: @blog_post-title-color-hover;
+                            padding-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            @media (min-width: 767px) {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -1 * @blog_grid-gutter;
+
+                li {
+                    padding-left: @blog_grid-gutter;
+                    flex-basis: 50%;
+                    -webkit-flex-basis: 50%;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                li {
+                    flex-basis: 33.333%;
+
+                    h5.post-title a {
+                        font-size: @blog_post-title-size;
+                    }
+                }
+            }
+        }
+
+        .related-post-grid {
+            padding: 0;
+            margin: 0 -15px;
+
+            .inner {
+                padding:0 15px;
+            }
+
+            .post-image {
+                display: block;
+                margin-bottom: 10px;
+
+                img{
+                    vertical-align: top;
+                }
+            }
+
+            h5.post-title{
+                margin: 0;
+                font-weight:normal;
+                line-height: normal;
+
+                a{
+                    font-size: 14px;
+                    color: @blog_post-title-color;
+                }
+            }
+
+            @media (min-width: 1200px) {
+                li {
+                    flex-basis: 33.333%;
+
+                    h5.post-title a {
+                        font-size: @blog_post-title-size;
+                    }
+                }
+            }
+        }
+    }
+}

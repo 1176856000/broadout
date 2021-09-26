@@ -1,0 +1,22 @@
+<!-- ko if: enable -->
+<div class="listingScroll" id="scrollbar">
+    <!-- ko foreach: rules -->
+    <div class="display-coupon-list">
+        <!-- ko if: $parent.displayFields($data) -->
+        <strong><p class="code" data-bind="text: $data.code"></p></strong>
+        <p class="description" data-bind="text: $data.description"></p>
+        <p class="toDate" data-bind="css: $parent.dateStyling($data), text: $parent.showExpiring($data)"></p>
+        <p class="usesPerCoupon" data-bind="text: $parent.showUsesPerCoupon($data)"></p>
+        <p class="usesPerCustomer" data-bind="text: $parent.showUsesPerCustomer($data)"></p>
+        <!-- /ko -->
+        <!-- ko if: $parent.checkConfigurationValidate($data)-->
+        <button class="action primary" type="submit" data-bind="i18n: 'Use Now',click: $parent.useNow, disable: $parent.isApplied()"></button>
+        <!-- /ko -->
+        <!--ko ifnot: $parent.checkConfigurationValidate($data)-->
+        <span class="reasonNotUsed" data-bind="text: $parent.reason"></span>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+    <div id="noCouponCode" data-bind="i18n: 'No Coupon Code', visible: rules().length == 0"></div>
+</div>
+<!-- /ko -->

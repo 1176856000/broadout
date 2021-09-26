@@ -1,0 +1,71 @@
+<?php
+/**
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (https://www.plumrocket.com)
+ * @license     https://www.plumrocket.com/license/  End-user License Agreement
+ */
+?>
+<?php
+    $info = $this->getInfo();
+    if ($info->getAffiliateId()) {
+?>
+<div class="entry-edit entry-active" id="affiliate-networks" style="display: none;">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-billing-address"><?php echo __('Affiliate') ?></h4>
+    </div>
+    <fieldset>
+        <div id="affiliate_is_transaction_data">
+            <table cellspacing="0" class="form-list">
+                <tr>
+                    <td class="label">
+                        <label for="status"><?php echo __('Affiliate Transaction') ?></label>
+                    </td>
+                    <td class="value">
+                        <?php $affiliates = $this->getAffiliateNetworks() ?>
+                        <?php if (count($affiliates)) { ?>
+                            <?php foreach($affiliates as $affiliate) { ?>
+                                <?php if ($affiliate->getId() == $info->getAffiliateId()) { ?>
+                                    <?php echo $this->escapeHtml($affiliate->getData('name')) ?>
+                                <?php } ?>
+                             <?php } ?>
+                        <?php } else { ?>
+                            <?php echo __('---') ?>
+                        <?php } ?>
+                    </td>
+                </tr>
+                <?php if (trim($info->getComment())) { ?>
+                <tr id="affiliate_comment_hld" <?php if (!$info->getAffiliateId()) echo 'style="display:none;"' ?>>
+                    <td class="label">
+                        <label for="status"><?php echo __('Comment') ?></label>
+                    </td>
+                    <td class="value">
+                        <?php echo $this->escapeHtml($info->getComment()) ?>
+                    </td>
+                </tr>
+                <?php } ?>
+            </table>
+        </div>
+    </fieldset>
+</div>
+<script>
+    requirejs(['jquery', 'domReady!'], function($) {
+        var afBlock = document.getElementById('affiliate-networks');
+        var leftBlocks = document.getElementsByClassName('admin__page-section');
+        for(var i=0; i<leftBlocks.length; i++) {
+            if (i == 1) {
+                leftBlocks[i].appendChild(afBlock);
+                $(afBlock).show();
+                break;
+            }
+        }
+        $('#affiliate_affiliate_id').on('change', function(e) {
+            var commentHld = $('#affiliate_comment_hld');
+            if ($(this).val()) {
+                commentHld.show();
+            } else {
+                commentHld.hide();
+            }
+        });
+    });
+</script>
+<?php } ?>

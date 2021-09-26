@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var $block \Magento\Catalog\Block\Product\View*/
+?>
+<?php
+$_product = $block->getProduct();
+$brand = $_product->getResource()->getAttribute('brand_id')->getFrontend()->getValue($_product);
+$price = $_product->getResource()->getAttribute('price')->getFrontend()->getValue($_product);
+$gtin13 = $_product->getResource()->getAttribute('gtin')->getFrontend()->getValue($_product);
+$urlForm = $this->getReviewsUrl();
+
+$objectmanager = \Magento\Framework\App\ObjectManager::getInstance();
+$productimages = array();
+$imgproduct = $objectmanager ->create('Magento\Catalog\Model\Product')->load($_product->getId());
+$productimages = $imgproduct->getMediaGalleryImages();
+
+?>
+<span itemprop="offers" itemtype="http://schema.org/AggregateOffer" itemscope>
+    <meta itemprop="price" content="<?= $price?>" />
+    <meta itemprop="priceCurrency" content="<?= $block->getCurrentCurrencyCode()?>" />
+    <meta itemprop="lowPrice" content="<?= $price?>" />
+    <meta itemprop="highPrice" content="<?= $price?>" />
+    <meta itemprop="offerCount" content="6" />
+    <?php if ($block->displayProductStockStatus()) :?>
+        <?php if ($_product->isAvailable()) :?>
+            <meta itemprop="availability" content="InStock" />
+        <?php else :?>
+            <meta itemprop="availability" content="OutofStock" />
+        <?php endif; ?>
+    <?php endif; ?>
+    <meta itemprop="priceValidUntil" content="2050-12-30" />
+    <meta itemprop="url" content="<?= $block->escapeUrl($urlForm) ?>" />
+</span>
+
+<?php foreach($productimages as $productimage) {?>
+    <link itemprop="image" href="<?= $productimage['url']?>" />
+<?php }?>
+
+
+<meta itemprop="brand" content="<?= $brand?>" />
+<span itemprop="review" itemtype="http://schema.org/Review" itemscope>
+    <span itemprop="author" itemtype="http://schema.org/Person" itemscope>
+        <meta itemprop="name" content="Fred Benson" />
+    </span>
+</span>
+<meta itemprop="gtin13" content="<?= $gtin13?>" />

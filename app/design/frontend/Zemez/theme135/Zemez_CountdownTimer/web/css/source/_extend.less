@@ -1,0 +1,24 @@
+//
+//  Countdown Timer
+//  ---------------------------------------------
+
+& when (@media-target = 'mobile') {
+    .timer-wrapper {
+        .make-flex();
+        justify-content: center;
+        align-items: center;
+        background: @color-primary;
+        opacity: .8;
+        z-index: 2;
+
+        > div {
+            color: @color-white;
+            font-weight: 700;
+            padding: 10px;
+            font-size: 12px;
+            @media (min-width: @screen__xs) {
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,118 @@
+/*
+ * Plumrocket Inc.
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the End-user License Agreement
+ * that is available through the world-wide-web at this URL:
+ * http://wiki.plumrocket.net/wiki/EULA
+ * If you are unable to obtain it through the world-wide-web, please
+ * send an email to support@plumrocket.com so we can send you a copy immediately.
+ *
+ * @package     Plumrocket_Affiliate
+ * @copyright   Copyright (c) 2016 Plumrocket Inc. (http://www.plumrocket.com)
+ * @license     http://wiki.plumrocket.net/wiki/EULA  End-user License Agreement
+ */
+
+.affilate__title span {
+    font-size: 20px;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.search__wrp {
+    position: relative;
+}
+
+.search__wrp svg {
+    stroke: #c4c4ce;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    width: 15px;
+}
+
+.search__field {
+    height: 35px;
+    width: 340px;
+    color: #3e3e3e;
+    padding: 9px 9px 9px 40px;
+    border: 1px solid #c4c4ce;
+}
+
+.search__field:focus {
+    border-color: #e0510f;
+}
+
+.search__field::placeholder {
+    color: #c4c4ce;
+}
+
+.affilate__form {
+    max-height: 480px;
+    overflow: auto;
+    margin-top: 25px;
+    padding: 25px 0;
+    border-top: 1px solid #c4c4ce;
+}
+
+.affilate__item-wrp {
+    min-height: 75px;
+}
+
+.affilate__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(auto, 216px));
+    grid-gap: 7px;
+}
+
+.affilate__item-wrp label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 10px 15px;
+    height: 100%;
+    transition: box-shadow, all .3s .1s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.affilate__item-wrp label:hover {
+    box-shadow: 0 4px 10px -5px #1d1d1d;
+    cursor: pointer;
+}
+
+.affilate__item-wrp input:checked + label {
+    border: 1px solid transparent;
+    box-shadow: inset 0 0 0 2px #e0510f;
+}
+
+.affilate__item-wrp input:checked + label:after {
+    content: "";
+    border: 20px solid transparent;
+    border-top: 20px solid #e0510f;
+    border-right: 20px solid #e0510f;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.affilate__item-wrp input:checked + label:before {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg fill='%23fff' version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='10px' height='10px' viewBox='0 0 78.369 78.369' xml:space='preserve'%3E%3Cg%3E%3Cpath d='M78.049,19.015L29.458,67.606c-0.428,0.428-1.121,0.428-1.548,0L0.32,40.015c-0.427-0.426-0.427-1.119,0-1.547l6.704-6.704 c0.428-0.427,1.121-0.427,1.548,0l20.113,20.112l41.113-41.113c0.429-0.427,1.12-0.427,1.548,0l6.703,6.704 C78.477,17.894,78.477,18.586,78.049,19.015z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    top: 7px;
+    right: 7px;
+    z-index: 1;
+    width: 10px;
+    height: 10px;
+}
+
+.pr-affiliate-hidden {
+    display: none !important;
+}
