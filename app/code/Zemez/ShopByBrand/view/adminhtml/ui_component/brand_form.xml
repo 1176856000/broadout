@@ -129,6 +129,25 @@
                 </item>
             </argument>
         </field>
+
+
+        <field name="position">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="label" xsi:type="string" translate="true">Position</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">brand</item>
+                    <item name="sortOrder" xsi:type="number">26</item>
+                    <item name="dataScope" xsi:type="string">position</item>
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="tooltip" xsi:type="array">
+                        <item name="description" xsi:type="string" translate="true">Item Conditions will be displayed to the Customer on the frontend in the order according to their positions.</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+
         <field name="logo">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">

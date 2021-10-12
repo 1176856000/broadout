@@ -121,6 +121,11 @@ class Brand extends AbstractModel implements BrandInterface, IdentityInterface
         return $this->getData(self::BRAND_BANNER);
     }
 
+    public function getPosition()
+    {
+        return $this->getData(self::POSITION);
+    }
+
     public function getProductBanner()
     {
         return $this->getData(self::PRODUCT_BANNER);
@@ -164,6 +169,11 @@ class Brand extends AbstractModel implements BrandInterface, IdentityInterface
     public function setName($name)
     {
         return $this->setData(self::NAME, $name);
+    }
+
+    public function setPosition($position)
+    {
+        return $this->getData(self::POSITION,$position);
     }
 
     public function setUrlPage($urlPage)
@@ -215,6 +225,7 @@ class Brand extends AbstractModel implements BrandInterface, IdentityInterface
     {
         return $this->setData(self::META_KEYWORDS, $metaKeywords);
     }
+
 
     public function setMetaDescription($metaDescription)
     {

@@ -169,6 +169,17 @@
                 </item>
             </argument>
         </column>
+
+        <column name="position">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">textRange</item>
+                    <item name="label" xsi:type="string" translate="true">Position</item>
+                    <item name="sorting" xsi:type="string">desc</item>
+                </item>
+            </argument>
+        </column>
+
         <column name="name">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -183,6 +194,7 @@
                 </item>
             </argument>
         </column>
+
         <column name="status">
             <argument name="data" xsi:type="array">
                 <item name="options" xsi:type="object">Zemez\ShopByBrand\Model\Brand\Source\IsActive</item>

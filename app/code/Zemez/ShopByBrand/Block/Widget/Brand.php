@@ -79,6 +79,7 @@ class Brand extends Template implements \Magento\Widget\Block\BlockInterface
         $brandCollection = $this->brand->create()->getResourceCollection();
         $brandCollection->addWebsiteFilter()->addFieldToFilter('status','1');
         $brandCollection->addFieldToFilter('brand_id',['in'=>$brandIds]);
+        $brandCollection->setOrder('position','asc');
         if ($this->getBrands()) {
             $brandCollection->getSelect()->limit($this->getBrandAmount());
         }
